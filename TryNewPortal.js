@@ -1,4 +1,4 @@
-﻿document.write('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">');
+document.write('<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">');
 
 let popHtml =   "" +
   "<div  class='alert alert-danger tryPopup' role='alert' >" +
@@ -9,18 +9,22 @@ let popHtml =   "" +
     "<style>" +
     "  .tryPopup {" +
   "     position: fixed !important; " +
-  "     bottom: 2px !important; " +
+  "     top: 12px !important; " +
   "     right: 2px !important; " +
   "     padding-left:2px !important;" +
   "     padding-right: 2px !important;" +
+  "     z-index: 10000;" +
   "  }" +
   " .closer {" +
   "    padding-left:10px;" +
   "    cursor: pointer;" +
+  "    height: 100%;" +
   "}" +
   " .opener {" +
   "    padding-left:0px;" +
   "    cursor: pointer;" +
+  "    height: 100%;" +
+  "    width: 10px;" +
   "}" +
   " .alert {" +
   "      background-color:#f5c6cb;" +
@@ -35,10 +39,10 @@ ShowTryNewPortal();
 
 setTimeout(function () {
   openAlert();
-}, 2000);
+}, 5000);
 setTimeout(function () {
   closeAlert();
-}, 5000);
+}, 10000);
 
 function ShowTryNewPortal() {
   console.log(popHtml);
